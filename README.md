@@ -23,6 +23,13 @@ Check your fermentation!! Current temp: {{Value1}} Target temp: {{Value2}} Time:
 ```
 Both "Value1" (current temp) and "Value2" (target temp) parameters are provided by this module, just include them in your action. "OccurredAt" is an IFTTT timestamp, no need to worry about it.
 
+If you want to subscribe the MQTT topic you'll need to know your ESP 8266 boards MAC address. ```getSerial();``` returns this. By default 'test.mosquitto.org' is the broker, and the topic will be 'tempdeck/esp8266/serial number of your board'. If using via the Web IDE, console will output your broker and topic information. e.g.
+
+```
+Connected..
+MQTT Server: 'test.mosquitto.org', Topic: 'tempdeck/esp8266/18fe34da-fa4a' 
+```
+
 ## Example   
 
 ```
@@ -45,6 +52,8 @@ tempdeck.config.ifttt = {
 tempdeck.init();
 
 ```
+
+
 
 ## Config Options
 
