@@ -26,7 +26,7 @@ Both "Value1" (current temp) and "Value2" (target temp) parameters are provided 
 ## Example   
 
 ```
-var tempdeck = require("https://github.com/olliephillips/tempdeck/blob/master/tempdeck.min.js").tempdeck; // Load from Github
+var tempdeck = require("tempdeck").tempdeck;
 
 // Below are the only required configuration options
 
@@ -41,13 +41,14 @@ tempdeck.config.ifttt = {
   event:	"temp_tolerance"
 };
 
+// Start
 tempdeck.init();
 
 ```
 
 ## Config Options
 
-The ```tempdeck.config``` object has the following defaults. 
+The ```tempdeck.config``` object literal has the following defaults. 
 
 ```
 config: {
@@ -59,7 +60,7 @@ config: {
     target:       20,
     tolerance:    2,
     interval:     5,
-    serial:  getSerial(), // This will return ESP8266 MAC address
+    serial:  getSerial(), // This will return ESP 8266 MAC address
     mqtt: {
       server:     "test.mosquitto.org",
       topic :     "tempdeck/esp8266/"
@@ -73,4 +74,4 @@ config: {
 
 ## To do
 
-- A client for subscribing to the MQTT topic for the purpose of monitoring the fermentation
+- A client for subscribing to the MQTT topic for the purpose of monitoring temperature
