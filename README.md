@@ -39,8 +39,8 @@ var tempdeck = require("tempdeck").tempdeck;
 
 // Configure
 tempdeck.config.wifi = {
-    ssid:	"MyWifiNetwork",
-    pwd:	"myPassword"
+   ssid:	"MyWifiNetwork",
+   pwd:		"myPassword"
 };
 
 tempdeck.config.ifttt = {
