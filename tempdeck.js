@@ -94,7 +94,7 @@ var tempdeck = {
   // IFTTT alert notification
   alert: function(){
     tempdeck.alertTarget =  "http://maker.ifttt.com/trigger/" + tempdeck.config.ifttt.event + "/with/key/"+ tempdeck.config.ifttt.key;
-    tempdeck.alertData = "?value1=" + tempdeck.curTemp + "&amp;value2=" + tempdeck.config.target;
+    tempdeck.alertData = "?value1=" + tempdeck.curTemp + "&value2=" + tempdeck.config.target;
     require("http").get(tempdeck.alertTarget + tempdeck.alertData, function(res) {
     res.on('close', function() {
       tempdeck.onAlert = true;
