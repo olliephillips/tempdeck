@@ -11,8 +11,7 @@ There's much more that can be done here, for example local and remote control of
 ## Setup
 
 Assumes running Espruino on ESP 8266. It will run on any ESP 8266 board, only one GPIO is required.
-Download and load the module locally, or use it directly from this repo. There is a Closure minified version included. 
-
+There is a Closure minified version included. 
 Requires a DS18B20 temperature sensor.
 
 This module could easilly be modified to run on Pico and original Espruino board.
@@ -27,7 +26,7 @@ Both "Value1" (current temp) and "Value2" (target temp) parameters are provided 
 ## Example   
 
 ```
-var tempdeck = require("tempdeck").tempdeck;
+var tempdeck = require("https://github.com/olliephillips/tempdeck/blob/master/tempdeck.min.js").tempdeck; // Load from Github
 
 // Below are the only required configuration options
 
