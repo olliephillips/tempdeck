@@ -16,7 +16,7 @@ var tempdeck = {
     serial:  getSerial(),
     mqtt: {
       server:     "test.mosquitto.org",
-      topic :     "tempdeck/esp8266/"
+      topic :     "tempdeck/espruino/"
     },
     ifttt: {
       key:        "",

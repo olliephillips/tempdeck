@@ -23,11 +23,11 @@ Check your fermentation!! Current temp: {{Value1}} Target temp: {{Value2}} Time:
 ```
 Both "Value1" (current temp) and "Value2" (target temp) parameters are provided by this module, just include them in your action. "OccurredAt" is an IFTTT timestamp, no need to worry about it.
 
-If you want to subscribe to the MQTT topic for monitoring you'll need to know your ESP 8266 board's MAC address. ```getSerial();``` returns this. By default 'test.mosquitto.org' is the broker, and the topic will be 'tempdeck/esp8266/output-of-getSerial'. If using Espruino via the Chrome Web IDE, console will output your broker and topic information. e.g.
+If you want to subscribe to the MQTT topic for monitoring you'll need to know your ESP 8266 board's MAC address. ```getSerial();``` returns this. By default 'test.mosquitto.org' is the broker, and the topic will be 'tempdeck/espruino/output-of-getSerial'. If using Espruino via the Chrome Web IDE, console will output your broker and topic information. e.g.
 
 ```
 Connected..
-MQTT Server: 'test.mosquitto.org', Topic: 'tempdeck/esp8266/18fe34da-fa4a' 
+MQTT Server: 'test.mosquitto.org', Topic: 'tempdeck/espruino/18fef56da-fa4a' 
 ```
 
 ## Example   
@@ -72,7 +72,7 @@ config: {
     serial:  getSerial(), // This will return ESP 8266 MAC address
     mqtt: {
       server:     "test.mosquitto.org",
-      topic :     "tempdeck/esp8266/"
+      topic :     "tempdeck/espruino/"
     },
     ifttt: {
       key:        "",
@@ -81,6 +81,6 @@ config: {
   },
 ```
 
-## To do
+## Monitoring
 
-- A client for subscribing to the MQTT topic for the purpose of monitoring temperature
+There is a dedicated monitoring client available here https://github.com/olliephillips/tempdeck-client
