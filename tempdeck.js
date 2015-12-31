@@ -73,7 +73,7 @@ var tempdeck = {
             targetTemp: tempdeck.config.target,
             currentTemp: tempdeck.curTemp
           };
-          tempdeck.mqtt.publish("tempdeck/esp8266/" + tempdeck.config.serial, JSON.stringify(tempdeck.message));
+          tempdeck.mqtt.publish("tempdeck/espruino/" + tempdeck.config.serial, JSON.stringify(tempdeck.message));
         }  
         // Within tolerance?
         tempdeck.variance = tempdeck.config.target - tempdeck.curTemp;
